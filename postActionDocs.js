@@ -4,11 +4,11 @@ var _ = require("lodash");
 const redisGrp = require("redis");
 const masterNodesGrp = [
   {
-    url: "redis://redis-clstr.fheoyy.clustercfg.aps1.cache.amazonaws.com:6379",
+    url: "",
   },
 ];
 const elasticsearchSearch = getESConnection(
-  "https://vpc-es-post-actions-io6qy67quep6caduzcqopkbxc4.ap-south-1.es.amazonaws.com"
+  ""
 );
 const clientGrp = redisGrp.createCluster({
   rootNodes: masterNodesGrp,
@@ -27,10 +27,10 @@ clientGrp
 
 async function connectDb() {
   const connection = await mysql.createConnection({
-    host: "hood-production-rds.cluster-c7w6xkfdjdto.ap-south-1.rds.amazonaws.com",
-    port: "3306",
+    host: "",
+    port: "",
     user: "admin",
-    password: "Jo1n#ZorroPrdUser!#admin",
+    password: "",
   });
   return connection;
 }
