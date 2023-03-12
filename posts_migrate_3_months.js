@@ -372,10 +372,6 @@ async function putMappingInIndex(client, index, type = "_doc") {
   });
 }
 
-// startMigration({
-//   SOURCE_NODE: "https://publish-prd.joinzorro.com/elastic",
-//   TARGET_NODE: "http://localhost:9200",
-// });
 
 startMigration({
   SOURCE_NODE:
